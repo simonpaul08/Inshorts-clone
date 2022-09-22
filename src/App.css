@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+
+
+
+/* header */
+
+.header__container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+    height: 55px;
+    margin-left: -50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* main container */
+
+.main__container {
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.news__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0 70px;
+    padding: 15px 0;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* newsitem */
+.news__item {
+    width: 900px;
+    padding: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.news__image {
+    height: 268px;
+    width: 320px;
+}
+.news__image img{
+    height: 268px;
+    width: 320px;
+    border-radius: 4px;
+}
+
+.news__content {
+    margin-left: 20px;
+    height: 268px;
+}
+
+.news__title {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.news__author {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.news__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.news__read-more {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+.news__read-more:hover {
+    color: red;
+}
+
+/* btn */
+.btn__container {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.btn {
+    border: none;
+}
+.load__more {
+    font-size: 15px;
+    padding: 8px 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.load__more:active{
+    box-shadow: none;
 }
