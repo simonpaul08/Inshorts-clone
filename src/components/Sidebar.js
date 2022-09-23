@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom' 
 
 const Sidebar = ({ toggle, handleCloseBtn }) => {
   return (
@@ -8,13 +9,13 @@ const Sidebar = ({ toggle, handleCloseBtn }) => {
         </div>
         <p className='sidebar__text'>Categories</p>
         <div className="categories__container">
-            <p className="category">General</p>
-            <p className="category">Business</p>
-            <p className="category">Entertainment</p>
-            <p className="category">Health</p>
-            <p className="category">Science</p>
-            <p className="category">Technology</p>
-            <p className="category">Sport</p>
+            <Link to="/" className="category">General</Link>
+            <Link to="/business" className="category">Business</Link>
+            <Link to="/entertainment" className="category">Entertainment</Link>
+            <Link to="/health" className="category">Health</Link>
+            <Link to="/science" className="category">Science</Link>
+            <Link to="/technology" className="category">Technology</Link>
+            <Link to="/sports" className="category">Sport</Link>
         </div>
     </div>
   )
