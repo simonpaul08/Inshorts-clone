@@ -10,10 +10,11 @@ const Main = ({ category }) => {
     const [page, setPage] = useState(1)
     const [totalArticles, setTotalArticles] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/"
 
     const fetchNews = async () => {
         setIsLoading(true)
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=687fd619ebcd4209baf5b4e94d04ec5b&page=${page}&pageSize=10`
+        const url = `https://${proxyUrl}newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=84d25ff16f3f4db29ff82fae23d736b1&page=${page}&pageSize=10`
         const data = await fetch(url)
         const parsedData = await data.json()
         setNews(parsedData.articles)
@@ -36,7 +37,7 @@ const Main = ({ category }) => {
 
     const fetchMoreData = async () => {
         setIsLoading(true)
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=687fd619ebcd4209baf5b4e94d04ec5b&page=${page}&pageSize=10`
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=84d25ff16f3f4db29ff82fae23d736b1&page=${page}&pageSize=10`
         const data = await fetch(url)
         const parsed = await data.json()
         setNews(news.concat(parsed.articles))
